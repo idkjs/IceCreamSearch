@@ -19,6 +19,7 @@ let reducer = (action, _state) =>
 let initialState = () => {search: ""};
 let component = ReasonReact.reducerComponent(__MODULE__);
 
+[@genType]
 let make = (_children) => {
   ...component,
   initialState,

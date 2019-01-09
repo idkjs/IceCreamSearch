@@ -6,7 +6,7 @@ let make = (_children) => {
   ...component,
 render: _self =>
   <ReasonApollo.Provider client=Client.instance>
-    <Home />
+    <TabNavigatorRe />
  </ReasonApollo.Provider>
 };
 

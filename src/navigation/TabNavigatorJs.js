@@ -1,15 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
+import Home from '../Home.gen';
 
 class SettingsScreen extends React.Component {
   render() {
@@ -22,7 +14,7 @@ class SettingsScreen extends React.Component {
 }
 
 const TabNavigator = createBottomTabNavigator({
-  Home: HomeScreen,
+  Home: Home,
   Settings: SettingsScreen,
 });
 
