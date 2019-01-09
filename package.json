@@ -10,7 +10,7 @@
     "eject": "expo eject",
     "build": "bsb -make-world -clean-world",
     "watch": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world -w",
-    "clean":"bsb -clean-world -w"
+    "clean":"bsb -clean-world"
   },
   "dependencies": {
     "aws-amplify": "^1.1.18",

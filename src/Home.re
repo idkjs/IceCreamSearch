@@ -1,5 +1,6 @@
 open BsReactNative;
 open Styles;
+
 type state = {search: string};
 
 type actions =

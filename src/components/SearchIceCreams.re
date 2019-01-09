@@ -41,17 +41,6 @@ let make = (~searchQuery, _children) => {
                | Some(items) =>
                  let items = items->Belt.Array.keepMap(item => item);
                  <IceCreamList items />
-                /* <div style=app>
-                { items
-                 |> Array.map(item =>
-                      <div key={item.id} style=container>
-                        <p style=title> {ReasonReact.string(item.name)} </p>
-                        <p style=title> {ReasonReact.string(item.description)} </p>
-                      </Text>
-                      )
-                 |> ReasonReact.array
-                 }
-                 </Text> */
                }
              }
          }
