@@ -1,0 +1,32 @@
+{
+  "name": "my-reason-expo-app",
+  "reason": {
+    "react-jsx": 2
+  },
+  "bsc-flags": ["-bs-super-errors"],
+  "bs-dependencies": ["bs-react-native", "reason-react", "reason-expo","reason-apollo"],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs":true
+    }
+  ],
+  "suffix": ".bs.js",
+  "refmt": 3,
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "ppx-flags": [
+    "graphql_ppx/ppx",
+    "get_in_ppx/ppx"
+],
+"gentypeconfig": {
+  "language": "untyped",
+  "shims": {},
+  "debug": {
+    "all": false,
+    "basic": false
+  }
+}
+}
