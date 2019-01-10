@@ -10,7 +10,7 @@
     "eject": "expo eject",
     "build": "bsb -make-world -clean-world",
     "watch": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world -w",
-    "clean":"bsb -clean-world"
+    "clean": "bsb -clean-world"
   },
   "dependencies": {
     "aws-amplify": "^1.1.18",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
+    "flow-bin": "^0.89.0",
     "gentype": "^2.0.0",
     "get_in_ppx": "^1.0.2",
     "graphql_ppx": "^0.2.8"

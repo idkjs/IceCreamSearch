@@ -19,14 +19,15 @@ let reducer = (action, state) => {
 };
 
 let component = ReasonReact.reducerComponent(__MODULE__);
-
 [@genType]
-let make = _children => {
+let make = (_children) => {
   ...component,
   initialState,
   reducer,
   render: ({state: {name, description}, send}) =>
     <View style=styles##app>
+    <Text> {ReasonReact.string("SPACER")} </Text>
+    <Text> {ReasonReact.string("SPACER")} </Text>
       <Text> {ReasonReact.string("IceCream to add")} </Text>
       <TextInput
         autoFocus=true
@@ -43,15 +44,16 @@ let make = _children => {
         value=description
         onChangeText={description => send(UpdateDescription(description))}
       />
-      <Button
+      /* <Button
         color="tomato"
-        title="Press me"
+        title="Add IceCream"
         onPress={() => Js.log("name: " ++ name ++ " | desc:" ++ description)}
-      />
-      <Button
+      /> */
+      <AddButton title="Add IceCream" name description />
+      /* <Button
         color="red"
         title="Press me"
-        onPress={() => Js.log("pressed")}
-      />
+        onPress={() => navigation.navigate("Home")}
+      /> */
     </View>,
 };

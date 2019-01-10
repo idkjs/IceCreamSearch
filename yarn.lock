@@ -1938,7 +1938,7 @@ bs-platform@^4.0.17:
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.17.tgz#41458e74c101f7ac97eba723660971a42f0c5e65"
   integrity sha512-ypn2VEAmuVgX+ezKF9HXXzZ9Fe47UMPyt0x9MBBAF/C0Fus9wEIOdRD0gB4p3J9uLabB/MRWWuw7ORnP8w086g==
 
-"bs-platform@github:bsansouci/bsb-native#3.2.0":
+bs-platform@bsansouci/bsb-native#3.2.0:
   version "3.2.0"
   resolved "https://codeload.github.com/bsansouci/bsb-native/tar.gz/84604c9f6a5611eed68372efdb575c00a3e72813"
   dependencies:
@@ -3197,6 +3197,11 @@ find-up@^2.0.0, find-up@^2.1.0:
   integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
   dependencies:
     locate-path "^2.0.0"
+
+flow-bin@^0.89.0:
+  version "0.89.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.89.0.tgz#6bd29c2af7e0f429797f820662f33749105c32fa"
+  integrity sha512-DkO4PsXYrl53V6G5+t5HbRMC5ajYUQej2LEGPUZ+j9okTb41Sn5j9vfxsCpXMEAslYnQoysHhYu4GUZsQX/DrQ==
 
 follow-redirects@^1.2.5:
   version "1.6.1"

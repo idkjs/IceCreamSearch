@@ -1,0 +1,8 @@
+mutation AddIceCream($name: String!, $description: String!) {
+  createIceCream(input: {
+    name: $name
+    description: $description
+  }) {
+    name
+  }
+}

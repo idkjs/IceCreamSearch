@@ -22,7 +22,7 @@
     "get_in_ppx/ppx"
 ],
 "gentypeconfig": {
-  "language": "untyped",
+  "language": "flow",
   "shims": {},
   "debug": {
     "all": false,
