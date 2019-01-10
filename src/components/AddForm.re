@@ -34,6 +34,7 @@ let make = (_children) => {
         style=styles##inputStyle
         multiline=false
         value=name
+        clearTextOnFocus=true
         onChangeText={name => send(UpdateName(name))}
       />
       <Text> {ReasonReact.string("Description")} </Text>
@@ -42,6 +43,7 @@ let make = (_children) => {
         style=styles##inputStyle
         multiline=true
         value=description
+        clearTextOnFocus=true
         onChangeText={description => send(UpdateDescription(description))}
       />
       /* <Button
@@ -50,6 +52,7 @@ let make = (_children) => {
         onPress={() => Js.log("name: " ++ name ++ " | desc:" ++ description)}
       /> */
       <AddButton title="Add IceCream" name description />
+      /* {() => send(name:"",description:"")} */
       /* <Button
         color="red"
         title="Press me"

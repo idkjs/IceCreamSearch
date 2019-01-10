@@ -1,6 +1,5 @@
 open BsReactNative;
 
-open IceCream;
 module AddIceCream = [%graphql
   {|
   mutation AddIceCream($name: String!, $description: String!) {
@@ -17,6 +16,13 @@ module AddIceCream = [%graphql
 module AddIceCreamButton = ReasonApollo.CreateMutation(AddIceCream);
 
 let component = ReasonReact.statelessComponent("AddIceCream");
+let notCalled = (mutation, ~title) =>
+          <Button
+            title=title
+            onPress={_ =>
+              mutation
+              |> ignore
+            }/>;
 
 [@genType]
 let make =
@@ -43,13 +49,15 @@ let make =
               |> ignore
             }/>
           {switch (result) {
+
            | Loading => <Text> {ReasonReact.string("Searching")} </Text>
-           | NotCalled => <Text> {ReasonReact.string("Not Called")} </Text>
+           | NotCalled => <ListIceCreams />
+           /* | NotCalled => <Text> {ReasonReact.string("Not Called")} </Text> */
            | Error(error) =>
              <Text> {ReasonReact.string(error##message)} </Text>
            | Data(response) =>
              Js.log(response);
-             <Text> {ReasonReact.string("Added!")} </Text>;
+             <ListIceCreams />;
            }}
         </View>
       }

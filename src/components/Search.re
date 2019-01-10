@@ -19,9 +19,13 @@ let make = (~initialValue="", ~onChange=_newValue => (), _children) => {
   reducer,
   render: ({send, state:{value}}) =>
     <View>
+        <Text> {ReasonReact.string("SPACER")} </Text>
+    <Text> {ReasonReact.string("SPACER")} </Text>
+    <Text> {ReasonReact.string("SPACER")} </Text>
       <TextInput
         style=styles##inputStyle
         placeholder="Search for ice cream"
+        clearTextOnFocus=true
         value=value
           onChangeText={ value =>
           {send(ChangeValue(value));
