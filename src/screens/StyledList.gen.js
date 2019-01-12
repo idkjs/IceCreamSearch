@@ -5,17 +5,17 @@
  */
 
 // $FlowExpectedError: Reason checked type sufficiently
-import * as HomeBS from './Home.bs';
+import * as ReasonReact from 'reason-react/src/ReasonReact.js';
 
 // $FlowExpectedError: Reason checked type sufficiently
-import * as ReasonReact from 'reason-react/src/ReasonReact.js';
+import * as StyledListBS from './StyledList.bs';
 
 export type Props = {|+children?: mixed|};
 
 export const component: React$ComponentType<Props> = ReasonReact.wrapReasonForJs(
-  HomeBS.component,
+  StyledListBS.component,
   (function _(jsProps: Props) {
-     return HomeBS.make(jsProps.children);
+     return StyledListBS.make(jsProps.children);
   }));
 
 export default component;

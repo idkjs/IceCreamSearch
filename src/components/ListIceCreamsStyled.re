@@ -1,34 +1,30 @@
 open BsReactNative;
+
 open IceCream;
-module Search = [%graphql
+module ListIceCreams = [%graphql
   {|
-  query($searchQuery: String) {
-    listIceCreams(filter: {
-      searchField: {
-        contains: $searchQuery
-      }
-    }) {
-      items @bsRecord{
-        id
-        name
-        description
-        rating
-        image
-      }
+  query listAll {
+  listIceCreams {
+    items @bsRecord{
+      name
+      description
+      id
+      rating
+      image
     }
   }
+}
 |}
 ];
 
-module SearchQuery = ReasonApollo.CreateQuery(Search);
+module ListIceCreamsQuery = ReasonApollo.CreateQuery(ListIceCreams);
 
-let component = ReasonReact.statelessComponent("SearchIceCreams");
+let component = ReasonReact.statelessComponent("ListIceCreams");
 
-let make = (~searchQuery, _children) => {
+let make = (_children) => {
   ...component,
   render: _ => {
-    let searchQuery = Search.make(~searchQuery, ());
-    <SearchQuery variables=searchQuery##variables>
+    <ListIceCreamsQuery>
       ...{
            ({result}) =>
              switch (result) {
@@ -41,11 +37,11 @@ let make = (~searchQuery, _children) => {
                | None => <Text> {ReasonReact.string("Nothing to Show")} </Text>
                | Some(items) =>
                  let items = items->Belt.Array.keepMap(item => item);
-                 <IceCreamList items />
+                 <IceCreamListStyled items />
                }
              }
          }
       }
-    </SearchQuery>;
+    </ListIceCreamsQuery>;
   },
 };

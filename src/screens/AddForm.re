@@ -25,13 +25,12 @@ let make = (_children) => {
   initialState,
   reducer,
   render: ({state: {name, description}, send}) =>
-    <View style=styles##app>
+    <View>
     <Text> {ReasonReact.string("SPACER")} </Text>
     <Text> {ReasonReact.string("SPACER")} </Text>
       <Text> {ReasonReact.string("IceCream to add")} </Text>
       <TextInput
         autoFocus=true
-        style=styles##inputStyle
         multiline=false
         value=name
         clearTextOnFocus=true
@@ -40,23 +39,11 @@ let make = (_children) => {
       <Text> {ReasonReact.string("Description")} </Text>
       <TextInput
         autoFocus=false
-        style=styles##inputStyle
         multiline=true
         value=description
         clearTextOnFocus=true
         onChangeText={description => send(UpdateDescription(description))}
       />
-      /* <Button
-        color="tomato"
-        title="Add IceCream"
-        onPress={() => Js.log("name: " ++ name ++ " | desc:" ++ description)}
-      /> */
       <AddButton title="Add IceCream" name description />
-      /* {() => send(name:"",description:"")} */
-      /* <Button
-        color="red"
-        title="Press me"
-        onPress={() => navigation.navigate("Home")}
-      /> */
     </View>,
 };

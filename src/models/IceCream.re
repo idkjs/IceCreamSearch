@@ -4,6 +4,7 @@ type iceCream = {
   name: string,
   description: string,
   rating: option(float),
+  image: string
 };
 /* type IceCream {
 	id: ID!

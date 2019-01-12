@@ -52,7 +52,7 @@ let make =
 
            | Loading => <Text> {ReasonReact.string("Searching")} </Text>
            | NotCalled => <ListIceCreams />
-           /* | NotCalled => <Text> {ReasonReact.string("Not Called")} </Text> */
+           /* | NotCalled => <TestButton /> */
            | Error(error) =>
              <Text> {ReasonReact.string(error##message)} </Text>
            | Data(response) =>

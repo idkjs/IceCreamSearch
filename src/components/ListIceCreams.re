@@ -10,6 +10,7 @@ module ListIceCreams = [%graphql
       description
       id
       rating
+      image
     }
   }
 }

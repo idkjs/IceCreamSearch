@@ -23,7 +23,7 @@ let make = (~initialValue="", ~onChange=_newValue => (), _children) => {
     <Text> {ReasonReact.string("SPACER")} </Text>
     <Text> {ReasonReact.string("SPACER")} </Text>
       <TextInput
-        style=styles##inputStyle
+        /* style=styles##inputStyle */
         placeholder="Search for ice cream"
         clearTextOnFocus=true
         value=value

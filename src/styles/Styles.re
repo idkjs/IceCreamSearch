@@ -3,23 +3,35 @@ let styles =
   StyleSheet.create(
     Style.{
     "container": style([
-      padding(Pt(10.)),
+            flex(1.0),
+
+      /* padding(Pt(10.)),
       borderStyle(Solid),
       borderColor(String("#ddd")),
-      borderBottomWidth(1.),
+      borderBottomWidth(1.), */
     ]),
-    "app":style([textAlign(Center)]),
+    "list":style([
+      flex(1.0),
+      flexDirection(Row)
+      ]),
     "title":style([
         fontSize(Float(18.))
-        ]),
+    ]),
+    "image":style([
+        alignContent(FlexStart)
+    ]),
+    "text":style([
+      flex(1.0),
+    ]),
     "description":style([
-    fontSize(Float(15.)),
-    color(String("rgba(0, 0, 0, .5)"))
+      flex(1.0),
+      fontSize(Float(15.)),
+      color(String("rgba(0, 0, 0, .5)"))
     ]),
     "inputStyle":style([
-    height(Pt(40.)),
-    width(Pt(300.)),
-    padding(Pt(7.)),
-    fontSize(Float(15.)),
-]),
+      height(Pt(40.)),
+      width(Pt(300.)),
+      padding(Pt(7.)),
+      fontSize(Float(15.)),
+  ]),
 });

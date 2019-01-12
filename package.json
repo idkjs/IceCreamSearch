@@ -10,6 +10,7 @@
     "eject": "expo eject",
     "build": "bsb -make-world -clean-world",
     "watch": "export BS_CMT_POST_PROCESS_CMD=\"gentype\" && bsb -make-world -w",
+    "prettify": "prettier --write 'src/**/*.js'",
     "clean": "bsb -clean-world"
   },
   "dependencies": {
@@ -20,9 +21,11 @@
     "bs-react-native": "^0.10.0",
     "expo": "^32.0.0",
     "graphql-tag": "^2.10.0",
+    "lodash": "^4.17.11",
     "lodash.debounce": "^4.0.8",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-elements": "^0.19.1",
     "react-navigation": "^3.0.9",
     "reason-apollo": "^0.15.1",
     "reason-expo": "^31.1.0",
