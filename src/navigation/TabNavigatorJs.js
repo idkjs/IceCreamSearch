@@ -2,9 +2,9 @@ import React from "react";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import Home from "../screens/Home.gen";
 import AddForm from "../screens/AddForm.gen";
-import FlexDirection from "../screens/FlexDirection.gen";
-import StyledList from "../screens/StyledList.gen";
-import Settings from "../screens/settings";
+// import FlexDirection from "../screens/FlexDirection.gen";
+// import StyledList from "../screens/StyledList.gen";
+// import Settings from "../screens/settings";
 
 /*
   const AddCityStack = createStackNavigator({
@@ -18,9 +18,7 @@ const TabNavigator = createBottomTabNavigator({
 */
 const TabNavigator = createBottomTabNavigator({
   Home: Home,
-  ElementList: StyledList,
-  AddCity: AddForm,
-  Settings: Settings
+  AddCity: AddForm
 });
 
 export default createAppContainer(TabNavigator);

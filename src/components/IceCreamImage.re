@@ -1,5 +1,4 @@
 open BsReactNative;
-open Styles;
 let component = ReasonReact.statelessComponent("IceCreamImage");
 
 let make = (~image, _children) => {
