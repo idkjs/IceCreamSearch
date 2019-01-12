@@ -26,7 +26,7 @@ let make = (_children) => {
   initialState,
   reducer,
   render:({state,send}) =>
- <View style=Styles.container>
+ <View>
      <Header />
       <Search onChange=(changeSearch(send)) />
       {

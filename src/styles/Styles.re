@@ -1,10 +1,16 @@
 open BsReactNative;
 open Style;
 let container = style([
-    flex(1.0),
-        flexDirection(Row),
-        justifyContent(Center),
-        alignItems(Center),
+  flex(1.0),
+  flexDirection(Row),
+  justifyContent(Center),
+  alignItems(Center),
+]);
+let inputContainer = style([
+  flex(1.0),
+  flexDirection(Row),
+  justifyContent(Center),
+  alignItems(Center),
 ]);
 let listContainer = style([
   marginTop(Pt(10.)),
@@ -20,29 +26,41 @@ let rightbox = style([
   justifyContent(Center),
 ]);
 let title = style([
-    fontSize(Float(18.))
+  fontSize(Float(18.))
 ]);
 let description = style([
   flex(1.0),
   fontSize(Float(15.)),
   color(String("rgba(0, 0, 0, .5)"))
 ]);
+let header = style([
+  marginTop(Pt(40.)),
+  width(Pct(100.)),
+]);
 
-let header = style([marginTop(Pt(80.))]);
-
-let headerText =
-    style([
-    textAlign(Center),
-    fontSize(Float(72.)),
-    color(String("rgba(175, 47, 47, 0.25)")),
-    fontWeight(`_400),
+let headerText = style([
+  textAlign(Center),
+  fontSize(Float(40.)),
+  color(String("rgba(175, 47, 47, 0.25)")),
+  fontWeight(`_400),
 ]);
 let text = style([
   flex(1.0),
-])
-let inputStyle = style([
-  height(Pt(40.)),
-  width(Pt(300.)),
-  padding(Pt(7.)),
-  fontSize(Float(15.)),
+]);
+let inputContainer = style([
+    marginLeft(Pt(20.)),
+    marginRight(Pt(20.)),
+    shadowOpacity(0.2),
+    shadowRadius(3.),
+    shadowColor(String("#000000")),
+    shadowOffset(~height=2., ~width=2.),
+]);
+let input = style([
+      backgroundColor(String("#ffffff")),
+      height(Pt(40.)),
+      width(Pt(300.)),
+      /* padding(Pt(7.)), */
+      /* paddingLeft(Pt(10.)),
+      paddingRight(Pt(10.)), */
+      textAlign(Center),
 ]);

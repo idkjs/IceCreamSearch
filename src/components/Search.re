@@ -1,6 +1,4 @@
 open BsReactNative;
-open Styles;
-
 type state = {value: string};
 
 type action =
@@ -18,12 +16,9 @@ let make = (~initialValue="", ~onChange=_newValue => (), _children) => {
   initialState: () => {value: initialValue},
   reducer,
   render: ({send, state:{value}}) =>
-    <View>
-        <Text> {ReasonReact.string("SPACER")} </Text>
-    <Text> {ReasonReact.string("SPACER")} </Text>
-    <Text> {ReasonReact.string("SPACER")} </Text>
+    <View style=Styles.inputContainer>
       <TextInput
-        /* style=styles##inputStyle */
+        style=Styles.input
         placeholder="Search for ice cream"
         clearTextOnFocus=true
         value=value

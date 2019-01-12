@@ -2,27 +2,20 @@ open BsReactNative;
 
 module AddIceCream = [%graphql
   {|
-  mutation AddIceCream($name: String!, $description: String!) {
-  createIceCream(input: {
-    name: $name
-    description: $description
-  }) {
-    name @bsRecord
-  }
-}
-|}
+    mutation AddIceCream($name: String!, $description: String!) {
+      createIceCream(input: {
+        name: $name
+        description: $description
+      }) {
+        name @bsRecord
+      }
+    }
+  |}
 ];
 
 module AddIceCreamButton = ReasonApollo.CreateMutation(AddIceCream);
 
 let component = ReasonReact.statelessComponent("AddIceCream");
-let notCalled = (mutation, ~title) =>
-          <Button
-            title=title
-            onPress={_ =>
-              mutation
-              |> ignore
-            }/>;
 
 [@genType]
 let make =
@@ -51,8 +44,8 @@ let make =
           {switch (result) {
 
            | Loading => <Text> {ReasonReact.string("Searching")} </Text>
-           | NotCalled => <ListIceCreams />
-           /* | NotCalled => <TestButton /> */
+           /* | NotCalled => <ListIceCreams /> */
+           | NotCalled => ReasonReact.null
            | Error(error) =>
              <Text> {ReasonReact.string(error##message)} </Text>
            | Data(response) =>

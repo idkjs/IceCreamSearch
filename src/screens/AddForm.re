@@ -1,5 +1,5 @@
 open BsReactNative;
-open Styles;
+/* open FormStyle; */
 
 type state = {
   name: string,
@@ -25,25 +25,28 @@ let make = (_children) => {
   initialState,
   reducer,
   render: ({state: {name, description}, send}) =>
-    <View>
-    <Text> {ReasonReact.string("SPACER")} </Text>
-    <Text> {ReasonReact.string("SPACER")} </Text>
-      <Text> {ReasonReact.string("IceCream to add")} </Text>
-      <TextInput
-        autoFocus=true
-        multiline=false
-        value=name
-        clearTextOnFocus=true
-        onChangeText={name => send(UpdateName(name))}
-      />
-      <Text> {ReasonReact.string("Description")} </Text>
-      <TextInput
-        autoFocus=false
-        multiline=true
-        value=description
-        clearTextOnFocus=true
-        onChangeText={description => send(UpdateDescription(description))}
-      />
+    <View style=FormStyle.container>
+      <View style=Styles.inputContainer>
+        <TextInput style=Styles.input
+        placeholder="IceCream to add"
+          autoFocus=true
+          multiline=false
+          value=name
+          clearTextOnFocus=true
+          onChangeText={name => send(UpdateName(name))}
+        />
+      </View>
+      <Text> {ReasonReact.string(" ")} </Text>
+      <View style=Styles.inputContainer>
+        <TextInput style=Styles.input
+        placeholder="Description"
+          autoFocus=false
+          multiline=true
+          value=description
+          clearTextOnFocus=true
+          onChangeText={description => send(UpdateDescription(description))}
+        />
+      </View>
       <AddButton title="Add IceCream" name description />
     </View>,
 };
