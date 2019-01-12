@@ -10,3 +10,5 @@ npm-debug.*
 lib
 .merlin
 scratch
+.graphql_ppx_cache
+.DS_Store
