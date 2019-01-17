@@ -1,5 +1,4 @@
-open BsReactNative;
-open Style;
+open BsReactNative.Style;
 let container = style([
   flex(1.0),
   flexDirection(Row),
@@ -37,7 +36,6 @@ let header = style([
   marginTop(Pt(40.)),
   width(Pct(100.)),
 ]);
-
 let headerText = style([
   textAlign(Center),
   fontSize(Float(40.)),

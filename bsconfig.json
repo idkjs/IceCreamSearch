@@ -4,13 +4,12 @@
     "react-jsx": 2
   },
   "bsc-flags": ["-bs-super-errors"],
-  "bs-dependencies": ["bs-react-native", "reason-react", "reason-expo","reason-apollo"],
-  "sources": [
-    {
-      "dir": "src",
-      "subdirs":true
-    }
+  "bs-dependencies": ["bs-react-native", "reason-react", "reason-expo", "reason-apollo", "reason-expo-vector-icons"
   ],
+  "sources": [{
+    "dir": "src",
+    "subdirs": true
+  }],
   "suffix": ".bs.js",
   "refmt": 3,
   "package-specs": {
@@ -20,13 +19,13 @@
   "ppx-flags": [
     "graphql_ppx/ppx",
     "get_in_ppx/ppx"
-],
-"gentypeconfig": {
-  "language": "flow",
-  "shims": {},
-  "debug": {
-    "all": false,
-    "basic": false
+  ],
+  "gentypeconfig": {
+    "language": "flow",
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
   }
-}
 }

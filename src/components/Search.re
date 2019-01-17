@@ -1,4 +1,5 @@
 open BsReactNative;
+open ReasonExpoVectorIcons;
 type state = {value: string};
 
 type action =
@@ -16,16 +17,19 @@ let make = (~initialValue="", ~onChange=_newValue => (), _children) => {
   initialState: () => {value: initialValue},
   reducer,
   render: ({send, state:{value}}) =>
-    <View style=Styles.inputContainer>
-      <TextInput
-        style=Styles.input
-        placeholder="Search for ice cream"
-        clearTextOnFocus=true
-        value=value
-          onChangeText={ value =>
-          {send(ChangeValue(value));
-          onChange(value)}
-          }
-      />
+    <View style=SearchStyle.wrapper>
+      <View style=SearchStyle.searchContainer>
+      <Ionicons style=SearchStyle.searchIcon name=`iosSearch size=20 color=Colors.gray02 />
+        <TextInput
+          style=SearchStyle.textInput
+          placeholder="Try Chocolate"
+          clearTextOnFocus=true
+          value=value
+            onChangeText={ value =>
+            {send(ChangeValue(value));
+            onChange(value)}
+            }
+        />
+      </View>
     </View>,
 };
